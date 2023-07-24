@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.head{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+}
+
+.logo{
+    font-size: 1.6em;
+}
+.logo a {
+    color: black;
+}
+
+.navigation ul li {
+    display: flex;
+    gap: 40px;
+}
+
+.navigation ul li a {
+    color: black;
+    transition: all 0.2s ease-in-out;
+}
+.navigation ul li a:hover,
+.navigation ul li a:focus-visible {
+    opacity: 0.6;
+}
+.navigation ul li a:active{
+    transform: translate(0px, 2px);
+}
