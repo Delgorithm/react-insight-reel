@@ -3,7 +3,6 @@
 }
 
 *{
-    overflow:scroll;
 }
 
 .section{
@@ -33,6 +32,10 @@
     font-weight: 200;
 }
 
+.howitworks{
+    overflow: auto;
+}
+
 .howitworks > p{
     font-size: 3em;
     display: flex;
@@ -44,6 +47,9 @@
     width: 3000px;
     height: 400px;
     margin: 6rem;
+    overflow: hidden;
+
+
 }
 
 .grid-item{
