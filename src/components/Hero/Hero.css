@@ -6,6 +6,7 @@
     background-color: rgb(190, 234, 190);
     border-radius: 2vmax;
     margin: 0rem 8rem;
+    min-height: 80svh;
 }
 
 .left-part > p:nth-child(1){
