@@ -1,101 +1,128 @@
 import React from 'react';
 import './Section.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faNetworkWired } from '@fortawesome/free-solid-svg-icons';
+import { faCertificate } from '@fortawesome/free-solid-svg-icons';
+import { faSquarePollVertical } from '@fortawesome/free-solid-svg-icons';
+import {faLaptopFile } from '@fortawesome/free-solid-svg-icons';
+import { faScaleBalanced } from '@fortawesome/free-solid-svg-icons';
+import { faChartLine } from '@fortawesome/free-solid-svg-icons';
+
 
 const Section = () => {
   return (
     <section className="section">
-        <p>
-            The core of our unique approach lies in <br></br>
-            leveraging the capabilities of tools such <br></br>
-            as Hotjar and Mouseflow to capture and <br></br>
-            replay user sessions.
-        </p>
-        <div className="img-text">
-            <picture>
-                <img src="./img/img002.png" alt="" width={400} height={450} />
-            </picture>
+        <div className="section-content">
             <p>
-                Our UX experts meticulously watch <br></br>
-                countless recordings of these sessions, <br></br>
-                observing every click, scroll, and <br></br>
-                interaction. Unlike data analysis that often <br></br>
-                leans towards abstract interpretation, our <br></br>
-                approach affords a direct window into user <br></br>
-                behavior, ensuring a more authentic <br></br>
-                perspective
+                The core of our unique approach lies in <br></br>
+                leveraging the capabilities of tools such <br></br>
+                as Hotjar and Mouseflow to capture <br></br>
+                and replay user sessions.
             </p>
+            <div className="img-text">
+                <picture>
+                    <img src="./img/img002.png" alt="" width={400} height={450} />
+                </picture>
+                <p>
+                    Our UX experts meticulously watch <br></br>
+                    countless recordings of these sessions, <br></br>
+                    observing every click, scroll, and <br></br>
+                    interaction. Unlike data analysis that often <br></br>
+                    leans towards abstract interpretation, our <br></br>
+                    approach affords a direct window into user <br></br>
+                    behavior, ensuring a more authentic <br></br>perspective.
+                </p>
+            </div>
         </div>
         <div className="howitworks">
             <p>How it works</p>
             <div className="wrapper">
-                <div className="grid-item">
-                    <p>Sign Up</p>
-                    <p>
-                        Start your jorney towards product <br></br>
-                        betterment by simply signing up for <br></br>
-                        our service.
-                    </p>
-                    <p>01</p>
-                </div>
-                <div className="grid-item">
-                    <p>Setup Instructions</p>
-                    <p>
-                        Upon sign-up, you'll receive an email <br></br>
-                        from us with detailed instructions on <br></br>
-                        how to set up or provide us access to <br></br>
-                        your session-recording tool.
-                    </p>
-                    <p>02</p>
-                </div>
-                <div className="grid-item">
-                    <p>Expert Analysis</p>
-                    <p>
-                        One of our experienced UX experts <br></br>
-                        will delve into your product and <br></br>
-                        session recordings. By observing <br></br>
-                        every click, scroll, and interaction, we <br></br>
-                        will gather a detailed understanding of <br></br>
-                        user behaviors on your platform.
-                    </p>
-                    <p>03</p>
-                </div>
-                <div className="grid-item">
-                    <p>Lorem Ipsum</p>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur <br></br> 
-                        adipisicing elit. Odit hic ipsam sequi autem <br></br>
-                        accusamus eos aspernatur, minus expedita id optio <br></br>
-                        fugit sit atque? Neque facere aut ipsum, <br></br>
-                        voluptatibus quisquam fugiat.
-                    </p>
-                    <p>04</p>
-                </div>
-                <div className="grid-item">
-                    <p>Lorem Ipsum</p>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur <br></br> 
-                        adipisicing elit. Odit hic ipsam sequi autem <br></br>
-                        accusamus eos aspernatur, minus expedita id optio <br></br>
-                        fugit sit atque? Neque facere aut ipsum, <br></br>
-                        voluptatibus quisquam fugiat.
-                    </p>
-                    <p>05</p>
-                </div>
-                <div className="grid-item">
-                    <p>Lorem Ipsum</p>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur <br></br> 
-                        adipisicing elit. Odit hic ipsam sequi autem <br></br>
-                        accusamus eos aspernatur, minus expedita id optio <br></br>
-                        fugit sit atque? Neque facere aut ipsum, <br></br>
-                        voluptatibus quisquam fugiat.
-                    </p>
-                    <p>06</p>
-                </div>
+                {getSteps().map((step, index) => (
+                    <div className="grid-item" key={index}>
+                        <p>{step.title}</p>
+                        <p>{step.description}</p>
+                        <p>{step.stepNumber}</p>
+                    </div>
+                ))}
             </div>
         </div>
+        <div className="details">
+            {getDetails().map((step, index) => (
+                <div className="infoDetail" key={index}>
+                    <p>{step.logo}</p>
+                    <p>{step.title}</p>
+                    <p>{step.description}</p>
+                </div>
+            ))}
+        </div>
     </section>
-  )
-}
+  );
+};
+  
+const getSteps = () => [
+{
+    title: "Sign Up",
+    description: 'Start your journey towards product betterment by simply signing up for our service.',
+    stepNumber: '01'
+},
+{
+    title: 'Setup Instructions',
+    description: "Upon sign-up, you'll receive an email from us with detailed instructions on how to set up or provide us access to your session-recording tool.",
+    stepNumber: '02',
+    },
+    {
+    title: 'Expert Analysis',
+    description: 'One of our experienced UX experts will delve into your product and session recordings. By observing every click, scroll, and interaction, we will gather a detailed understanding of user behaviors on your platform.',
+    stepNumber: '03',
+    },
+    {
+    title: 'Lorem Ipsum',
+    description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit hic ipsam sequi autem accusamus eos aspernatur, minus expedita id optio fugit sit atque? Neque facere aut ipsum, voluptatibus quisquam fugiat.',
+    stepNumber: '04',
+    },
+    {
+    title: 'Lorem Ipsum',
+    description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit hic ipsam sequi autem accusamus eos aspernatur, minus expedita id optio fugit sit atque? Neque facere aut ipsum, voluptatibus quisquam fugiat.',
+    stepNumber: '05',
+    },
+    {
+    title: 'Lorem Ipsum',
+    description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit hic ipsam sequi autem accusamus eos aspernatur, minus expedita id optio fugit sit atque? Neque facere aut ipsum, voluptatibus quisquam fugiat.',
+    stepNumber: '06',
+    },
+];
 
-export default Section
+const getDetails = () => [
+    {
+        logo:<FontAwesomeIcon icon={faNetworkWired} style={{color: "#000000",}} />,
+        title:'Direct Window into User Behavior',
+        description: 'Unlike many services that rely heavily on abstract data analysis. Insight Reel provides you a unique approeach with a direct window into your users interactions. By replaying and analyzing actual user sessions, we ensure an authentic perspective that truly represents your users experiences.'
+    },
+    {
+        logo:<FontAwesomeIcon icon={faCertificate} style={{color: "#000000",}} />,
+        title:'UX Expertise',
+        description:'Our team is composed of UX experts with extensive experience. Their meticulosu approach to analyzing countless user session recordings ensures you get the most in-depth and comprehensive insights about your product.'
+    },
+    {
+        logo:<FontAwesomeIcon icon={faSquarePollVertical} style={{color: "#000000",}} />,
+        title:'Actionable Insights',
+        description:`Our finding aren't ujst analytical reports: they are actionable insights. We give you concrete improvement points based on actual user behavior, enabling you to implement targeted strategies for product enhancement.`
+    },
+    {
+        logo:<FontAwesomeIcon icon={faLaptopFile} style={{color: "#000000",}} />,
+        title:'Flexible Services',
+        description:`We understand the dynamic nature of businesses, and we offer flexible service options. Choose between ad-how reports or one of our subscription options to suit your needs.`
+    },
+    {
+        logo:<FontAwesomeIcon icon={faScaleBalanced} style={{color: "#000000",}} />,
+        title:'A Focus on Balance',
+        description:`Data is critical, but so is human behavior. We champion a balance between data analysis and user behavior observation, eliminating 'paralysis by analysis.`
+    },
+    {
+        logo:<FontAwesomeIcon icon={faChartLine} style={{color: "#000000",}} />,
+        title:'Continuous Improvement',
+        description:`With Insight Reel, the process of product enhancement is never-ending. We take pride in offering a consistent focus on user behavior analysis, ensuring continuous improvements for your offerings.`
+    },
+];
+
+export default Section;
