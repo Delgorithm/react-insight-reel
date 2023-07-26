@@ -116,6 +116,115 @@
     color: rgb(96, 96, 96);
 }
 
-logo{
+/* ----- Pricing ----- */
+.pricing{
+    margin: 6rem;
+}
 
+.pricing > p:nth-child(1){
+    font-size: 2em;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.first-bundle{
+    padding: 3rem;
+    border: 1px solid rgb(234, 234, 234);
+    border-radius: 2vmax;
+    margin-bottom: 30px;
+}
+
+.bundle-left-right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bundle-left{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    width: 80%;
+}
+
+.bundle-left > p:nth-child(1){
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.bundle-left > p:nth-child(2){
+    color: rgb(96, 96, 96);
+    margin-bottom: 20px;
+}
+
+.bundle-left > p:nth-child(3){
+    color: rgb(96, 96, 96);
+}
+
+.bundle-right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.bundle-right > p{
+    font-size: 2em;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* ---- Three bundle ---- */
+.three-bundle{
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.bundles{
+    border: 1px solid rgb(234, 234, 234);
+    border-radius: 2vmax;
+    padding: 1rem;
+    flex: 1;
+}
+
+.bundles > p:nth-child(1){
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.price-subscription{
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 4px;
+}
+
+.price-subscription > p:nth-child(1){
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.save-cancel{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.save-cancel > p:nth-child(1){
+    background-color: rgb(218, 212, 255);
+    padding: 5px;
+    border-radius: 1vmax;
+}
+
+.bundles > p:nth-child(5){
+    margin-bottom: 10px;
+}
+
+.bundles Button{
+    width: 100%;
 }
