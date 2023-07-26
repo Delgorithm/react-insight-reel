@@ -13,7 +13,7 @@ import Button from '../Button/Button';
 const Section = () => {
   return (
     <section className="section">
-        <div className="section-content">
+        <div className="section-content" id='about'>
             <p>
                 The core of our unique approach lies in <br></br>
                 leveraging the capabilities of tools such <br></br>
@@ -35,7 +35,7 @@ const Section = () => {
                 </p>
             </div>
         </div>
-        <div className="howitworks">
+        <div className="howitworks" id='how-it-works'>
             <p>How it works</p>
             <div className="wrapper">
                 {getSteps().map((step, index) => (
@@ -56,7 +56,7 @@ const Section = () => {
                 </div>
             ))}
         </div>
-        <div className="pricing">
+        <div className="pricing" id='pricing'>
             <p>Pricing</p>
             <div className="first-bundle">
                 {getCarte().map((step, index) => (
