@@ -35,6 +35,8 @@ const Section = () => {
                 </p>
             </div>
         </div>
+
+        {/* How it works */}
         <div className="howitworks" id='how-it-works'>
             <p>How it works</p>
             <div className="wrapper">
@@ -56,6 +58,8 @@ const Section = () => {
                 </div>
             ))}
         </div>
+
+        {/* Pricing */}
         <div className="pricing" id='pricing'>
             <p>Pricing</p>
             <div className="first-bundle">
@@ -92,17 +96,32 @@ const Section = () => {
                 ))}
             </div>
         </div>
+
+        {/* Faq */}
+        <div className="faq" id='faqs'>
+            <p>Got a question ?</p>
+            {getFaq().map((step, index) => (
+                <div className="questions" key={index}>
+                    <div className="questions-mark">
+                        <p>{ step.question }</p>
+                        <p>+</p>
+                    </div>
+                    <p>{ step.answer }</p>
+                </div>
+            ))}
+        </div>
+
     </section>
   );
 };
   
 const getSteps = () => [
-{
+    {
     title: "Sign Up",
     description: 'Start your journey towards product betterment by simply signing up for our service.',
     stepNumber: '01'
-},
-{
+    },
+    {
     title: 'Setup Instructions',
     description: "Upon sign-up, you'll receive an email from us with detailed instructions on how to set up or provide us access to your session-recording tool.",
     stepNumber: '02',
@@ -200,5 +219,28 @@ const getPrices = () => [
         info:"Stay on top of every issue as it surfaces, with an update report every week."
     },
 ];
+
+const getFaq = () => [
+    {
+        question: 'Q: What tools do you use for recording and analyzing user sessions ?',
+        answer:'lorem ipsum'
+    },
+    {
+        question: 'Q: How long does it take to receive the report after signing up ?',
+        answer:'lorem ipsum'
+    },
+    {
+        question: 'Q: What information will be included in the report ?',
+        answer:'lorem ipsum'
+    },
+    {
+        question: 'Q: Can you analyze user sessions or have specifi areas of concern ?',
+        answer:'lorem ipsum'
+    },
+    {
+        question: 'Q: How often can I receive reports if I subscribe to a continuous monitoring option ?',
+        answer:'lorem ipsum'
+    }
+]
 
 export default Section;
