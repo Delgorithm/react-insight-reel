@@ -1,0 +1,31 @@
+:root{
+    --clr-green: hsl(120, 51%, 83%);
+}
+
+.section{
+    margin: 8rem;
+}
+
+.section-content > p {
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 50px;
+    margin-left: 120px;
+}
+
+.img-text{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 70svh;
+}
+
+.img-text img{
+    background-color: var(--clr-green);
+    border-radius: 2vmax;
+}
+
+.img-text > p{
+    color: rgb(168, 167, 167);
+    font-weight: 200;
+}

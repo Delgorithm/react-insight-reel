@@ -1,5 +1,4 @@
-import React from 'react';
-import './Section.css';
+import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faNetworkWired } from '@fortawesome/free-solid-svg-icons';
 import { faCertificate } from '@fortawesome/free-solid-svg-icons';
@@ -7,47 +6,13 @@ import { faSquarePollVertical } from '@fortawesome/free-solid-svg-icons';
 import {faLaptopFile } from '@fortawesome/free-solid-svg-icons';
 import { faScaleBalanced } from '@fortawesome/free-solid-svg-icons';
 import { faChartLine } from '@fortawesome/free-solid-svg-icons';
-import Button from '../Button/Button';
-import { useState } from 'react';
+import './Work.css';
 
-
-const Faq = () => {
-    const [accordion, setAccordion] = useState(null);
-
-    function toggleAccordion(index) {
-        setAccordion(accordion === index ? null : index);
-    }
-}
-
-const Section = () => {
+const Work = () => {
   return (
-    <section className="section">
-        <div className="section-content" id='about'>
-            <p>
-                The core of our unique approach lies in <br></br>
-                leveraging the capabilities of tools such <br></br>
-                as Hotjar and Mouseflow to capture <br></br>
-                and replay user sessions.
-            </p>
-            <div className="img-text">
-                <picture>
-                    <img src="./img/img002.png" alt="" width={400} height={450} />
-                </picture>
-                <p>
-                    Our UX experts meticulously watch <br></br>
-                    countless recordings of these sessions, <br></br>
-                    observing every click, scroll, and <br></br>
-                    interaction. Unlike data analysis that often <br></br>
-                    leans towards abstract interpretation, our <br></br>
-                    approach affords a direct window into user <br></br>
-                    behavior, ensuring a more authentic <br></br>perspective.
-                </p>
-            </div>
-        </div>
-
-        {/* How it works */}
+    <section className='work'>
         <div className="howitworks" id='how-it-works'>
-            <p>How it works</p>
+                <p>How it works</p>
             <div className="wrapper">
                 {getSteps().map((step, index) => (
                     <div className="grid-item" key={index}>
@@ -66,54 +31,11 @@ const Section = () => {
                     <p>{step.description}</p>
                 </div>
             ))}
-        </div>
-
-        {/* Pricing */}
-        <div className="pricing" id='pricing'>
-            <p>Pricing</p>
-            <div className="first-bundle">
-                {getCarte().map((step, index) => (
-                    <div className="bundle-left-right" key={index}>
-                        <div className="bundle-left">
-                            <p>{step.carte}</p>
-                            <p>{step.report}</p>
-                            <p>{step.info}</p>
-                        </div>
-                        <div className="bundle-right" key={index}>
-                            <p>{step.price}</p>
-                            <Button />
-                        </div>
-                    </div>
-                ))}
-            </div>
-            <div className="three-bundle">
-                {getPrices().map((step, index) => (
-                    <div className="bundles" key={index}>
-                        <p>{ step.frequency }</p>
-                        <p>{ step.report }</p>
-                        <div className="price-subscription">
-                            <p>{ step.price }</p>
-                            <p>{ step.subscription }</p>
-                        </div>
-                        <div className="save-cancel">
-                            <p>{ step.save }</p>
-                            <p>{ step.cancelation }</p>
-                        </div>
-                        <p>{ step.info }</p>
-                        <Button />
-                    </div>
-                ))}
-            </div>
-        </div>
-
-        {/* Faq */}
-        
-    
-
+         </div>
     </section>
-  );
-};
-  
+  )
+}
+
 const getSteps = () => [
     {
     title: "Sign Up",
@@ -180,68 +102,4 @@ const getDetails = () => [
     },
 ];
 
-const getCarte = () => [
-    {
-        carte:"À la carte",
-        report:"Single Report",
-        info:"Our most flexible option. Get a report on-demand, whenever you need an audit or peace of mind",
-        price:"$999"
-    }
-]
-
-const getPrices = () => [
-    {
-        frequency: "Monthly",
-        report: "1 Report / Month",
-        price: "$799",
-        subscription: "per month",
-        save: "save 20%",
-        cancelation: "Cancel Any Time",
-        info:"Get scheduled insights and issues in your inbox, every month."
-    },
-    {
-        frequency: "Bi-Weekly",
-        report: "2 Reports / Month",
-        price: "$1399",
-        subscription: "per month",
-        save: "save 30%",
-        cancelation: "Cancel Any Time",
-        info:"Every two weeks, you get our top uncovered issues and insights in your inbox."
-    },
-    {
-        frequency: "Weekly",
-        report: "4 Reports / Month",
-        price: "$1999",
-        subscription: "per month",
-        save: "save 50%",
-        cancelation: "Cancel Any Time",
-        info:"Stay on top of every issue as it surfaces, with an update report every week."
-    },
-];
-
-const getFaq = () => [
-    {
-        question: 'Q: What tools do you use for recording and analyzing user sessions ?',
-        answer:'lorem ipsum'
-    },
-    {
-        question: 'Q: How long does it take to receive the report after signing up ?',
-        answer:'lorem ipsum'
-    },
-    {
-        question: 'Q: What information will be included in the report ?',
-        answer:'lorem ipsum'
-    },
-    {
-        question: 'Q: Can you analyze user sessions or have specifi areas of concern ?',
-        answer:'lorem ipsum'
-    },
-    {
-        question: 'Q: How often can I receive reports if I subscribe to a continuous monitoring option ?',
-        answer:'lorem ipsum'
-    }
-]
-
-
-
-export default Section;
+export default Work
