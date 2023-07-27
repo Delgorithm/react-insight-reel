@@ -8,7 +8,16 @@ import {faLaptopFile } from '@fortawesome/free-solid-svg-icons';
 import { faScaleBalanced } from '@fortawesome/free-solid-svg-icons';
 import { faChartLine } from '@fortawesome/free-solid-svg-icons';
 import Button from '../Button/Button';
+import { useState } from 'react';
 
+
+const Faq = () => {
+    const [accordion, setAccordion] = useState(null);
+
+    function toggleAccordion(index) {
+        setAccordion(accordion === index ? null : index);
+    }
+}
 
 const Section = () => {
   return (
@@ -98,18 +107,8 @@ const Section = () => {
         </div>
 
         {/* Faq */}
-        <div className="faq" id='faqs'>
-            <p>Got a question ?</p>
-            {getFaq().map((step, index) => (
-                <div className="questions" key={index}>
-                    <div className="questions-mark">
-                        <p>{ step.question }</p>
-                        <p>+</p>
-                    </div>
-                    <p>{ step.answer }</p>
-                </div>
-            ))}
-        </div>
+        
+    
 
     </section>
   );
@@ -242,5 +241,7 @@ const getFaq = () => [
         answer:'lorem ipsum'
     }
 ]
+
+
 
 export default Section;
